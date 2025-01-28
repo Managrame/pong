@@ -16,6 +16,14 @@ function Ball() {
     }
     
     function update() {
+    let o=document.body.getBoundingClientRect();
+    if(o.x<=0 ||o.x>o.width+64 ){
+        ball.vx=(-ball.vx)
+    }
+
+    if (o.y<=0 ||o.x>o.height+64 ) {
+        ball.vx=(-ball.vy)
+    }
     ball.x += ball.vx;
     ball.y += ball.vy;
     place_objects([ball]);
