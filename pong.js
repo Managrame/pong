@@ -4,18 +4,18 @@ function Ball() {
     this.x = 0;
     this.y = 0;
     this.vx =10
-    this.vy=10;
-    } 
-   
-    function place_objects(objects) {
-        for(let object of objects) {
-            let element = document.getElementById(object.id);
-            element.style.left = object.x + "px";
-            element.style.top = object.y + "px";
-        }
+this.vy=10;
+} 
+
+function place_objects(objects) {
+    for(let object of objects) {
+        let element = document.getElementById(object.id);
+        element.style.left = object.x + "px";
+        element.style.top = object.y + "px";
     }
-    
-    function update() {
+}
+
+function update() {
     let o=document.body.getBoundingClientRect();
     if(o.x<=0 ||o.x>o.width+64 ){
         ball.vx=(-ball.vx)
@@ -27,10 +27,10 @@ function Ball() {
     ball.x += ball.vx;
     ball.y += ball.vy;
     place_objects([ball]);
-    }
-    
-    let ball;
-    function init() {
+}
+
+let ball;
+function init() {
     ball = new Ball();
     setInterval(update, 100);
-    }
+}
