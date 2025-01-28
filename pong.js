@@ -4,7 +4,9 @@ function Ball() {
     this.x = 0;
     this.y = 0;
     this.vx =10
-this.vy=10;
+    this.vy=10;
+    this.height=64
+    this.widt=64
 } 
 
 function place_objects(objects) {
@@ -17,12 +19,13 @@ function place_objects(objects) {
 
 function update() {
     let o=document.body.getBoundingClientRect();
-    if(o.x<=0 ||o.x>o.width+64 ){
-        ball.vx=(-ball.vx)
+    
+    if(ball.x<=0 ||ball.x>o.width-ball.width ){
+        ball.vx=-(ball.vx)
     }
 
-    if (o.y<=0 ||o.x>o.height+64 ) {
-        ball.vx=(-ball.vy)
+    if (ball.y<=0 ||ball.y>o.height-ball.height ) {
+        ball.vy=-(ball.vy)
     }
     ball.x += ball.vx;
     ball.y += ball.vy;
