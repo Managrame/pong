@@ -9,6 +9,22 @@ function Ball() {
     this.width=64
 } 
 
+function Paddle(n){
+    this.id = "paddle"+n;
+    this.x = 0;
+    this.y = 0;
+    this.v=10;
+    this.height=192
+    this.width=24
+}
+
+function buttons(){
+    p1_down = false;
+    p1_up = false;
+    p2_down = false;
+    p2_up = false;
+}
+
 function place_objects(objects) {
     for(let object of objects) {
         let element = document.getElementById(object.id);
