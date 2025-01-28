@@ -1,0 +1,29 @@
+#ball{
+    height: 64px;
+    width: 64px;
+}
+
+#paddle1{
+    height: 192px;
+    width: 24px;
+}
+
+#paddle2{
+
+    height: 192px;
+    width: 24px;
+}
+
+body {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px;
+    }
+
+#scores{
+    text-align: center;
+    font-size :100px; ;
+}
