@@ -3,7 +3,9 @@ function Ball() {
     this.id = "ball";
     this.x = 0;
     this.y = 0;
-    }
+    this.vx =10
+    this.vy=10;
+    } 
    
     function place_objects(objects) {
         for(let object of objects) {
@@ -14,8 +16,8 @@ function Ball() {
     }
     
     function update() {
-    ball.x += 5;
-    ball.y += 5;
+    ball.x += ball.vx;
+    ball.y += ball.vy;
     place_objects([ball]);
     }
     
