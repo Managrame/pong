@@ -6,7 +6,7 @@ function Ball() {
     this.vx =10
     this.vy=10;
     this.height=64
-    this.widt=64
+    this.width=64
 } 
 
 function place_objects(objects) {
