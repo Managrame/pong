@@ -19,10 +19,10 @@ function Paddle(n){
 }
 
 function buttons(){
-    p1_down = false;
-    p1_up = false;
-    p2_down = false;
-    p2_up = false;
+    this.p1_down = false;
+    this.p1_up = false;
+    this.p2_down = false;
+    this.p2_up = false;
 }
 
 function place_objects(objects) {
@@ -33,9 +33,11 @@ function place_objects(objects) {
     }
 }
 
+
+let o=document.body.getBoundingClientRect();
 function update() {
-    let o=document.body.getBoundingClientRect();
     
+    /* mouvement ball*/
     if(ball.x<=0 ||ball.x>o.width-ball.width ){
         ball.vx=-(ball.vx)
     }
@@ -48,8 +50,43 @@ function update() {
     place_objects([ball]);
 }
 
+
+function track_player_input(event) {
+    if(event.type == "keydown") {
+    switch(event.key) {
+    case "a": buttons.p1_up = true; break;
+    case "q": buttons.p1_down = true; break;
+    case "p": buttons.p2_up = true; break;
+    case "m": buttons.p2_down = true; break;
+    }
+    } else if(event.type == "keyup") {
+    switch(event.key) {
+    case "a": buttons.p1_up = false; break;
+    case "q": buttons.p1_down = false; break;
+    case "p": buttons.p2_up = false; break;
+    case "m": buttons.p2_down = false; break;
+    }
+    }
+}
+document.addEventListener("keydown", track_player_input);
+document.addEventListener("keyup", track_player_input);
+
+
 let ball;
+
+let p1;
+
+let p2;
+
+let b ;
+
 function init() {
     ball = new Ball();
+    b=new buttons();
+    p1=new Paddle(1);
+    p1.y=o.height/2;
+    p2= new Paddle(2);
+    p2.x=o.width-p2.width;
+    p2.y=o.height/2;
     setInterval(update, 100);
 }
