@@ -36,7 +36,24 @@ function place_objects(objects) {
 
 let o=document.body.getBoundingClientRect();
 function update() {
-    
+    /*mouvement paddle1*/
+    if(p1.y<o.height||b.p1_up){
+        p1.y+=p1.v;
+    }
+
+    if(p1.y>p1.height||b.p1_down){
+        p1.y-=p1.v;
+    }
+   
+    /*mouvement paddle1*/
+    if(p2.y<o.height||b.p2_up){
+        p2.y+=p2.v;
+    }
+
+    if(p2.y>p2.height||b.p2_down){
+        p2.y-=p2.v;
+    }
+   
     /* mouvement ball*/
     if(ball.x<=0 ||ball.x>o.width-ball.width ){
         ball.vx=-(ball.vx)
@@ -47,7 +64,7 @@ function update() {
     }
     ball.x += ball.vx;
     ball.y += ball.vy;
-    place_objects([ball]);
+    place_objects([ball,p1,p2]);
 }
 
 
