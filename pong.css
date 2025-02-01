@@ -1,28 +1,50 @@
 #ball{
+    position: fixed;
     height: 64px;
     width: 64px;
 }
 
 #paddle1{
+    position: fixed;
     height: 192px;
     width: 24px;
 }
 
 #paddle2{
+    position: fixed;
     height: 192px;
     width: 24px;
+    
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-body {
+body{
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
     margin: 0px;
-    }
+}
 
 #scores{
+    /* centrer */
+    min-width: fit-content;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* style */
+    margin-top: 5px;
+    border-radius: 4%;
+    background-color: #183973;
+    border: 10px solid #183973;
+    color: #d4af37;
+    
+    /*  */
     text-align: center;
-    font-size :100px; ;
+    font-size: 100px;
+    font-family: "Consolas", "Cascadia Code", sans-serif;
 }
