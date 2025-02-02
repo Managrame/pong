@@ -5,8 +5,8 @@ function Ball(){
     this.width = 64;
     this.x = Math.round((window.innerWidth - this.height)/2); // placer la balle au milieu de l'écran
     this.y = Math.round((window.innerHeight - this.width)/2);
-    this.vx = 40; // vélocité de la balle
-    this.vy = 40;
+    this.vx = 4; // vélocité de la balle
+    this.vy = 4;
 } 
 
 function Paddle(n){
@@ -15,7 +15,7 @@ function Paddle(n){
     this.width = 24;
     this.x = 0;
     this.y = (o.height - this.height)/2; // placer la raquette au milieu de l'écran
-    this.v = 70;
+    this.v = 7;
 }
 
 function Buttons(){
@@ -106,5 +106,5 @@ function init(){
     score1 = 0;
     score2 = 0;
     p2.x = o.width-p2.width;
-    setInterval(update, 150);
+    setInterval(update, 10);
 }
