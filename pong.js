@@ -55,7 +55,7 @@ function update(){
         (p1.y < ball.y + ball.height/4 && ball.y + ball.height*3/4 < p1.y + p1.height && ball.x <= p1.width) || // le joueur 1 a rattrapé la balle
         (ball.x + ball.width >= p2.x && ball.x <= p2.x + p2.width && ball.y + ball.height >= p2.y && ball.y <= p2.y + p2.height) || // le joueur 2 a rattrapé la balle
         (ball.x <= 0 || ball.x >= o.width - ball.width) // la balle rebondit en haut ou en bas
-    ){ball.vx *= -1;}
+        ){ball.vx *= -1;}
     else if (ball.y <= 0 || ball.y >= o.height - ball.height)
         ball.vy *= -1; // le joueur n'a pas rattrapé la balle
 
