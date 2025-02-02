@@ -37,14 +37,14 @@ body{
     margin-right: auto;
 
     /* style */
-    margin-top: 5px;
+    margin-top: 10px;
+    padding: 5px;
     border-radius: 4%;
     background-color: #183973;
     border: 10px solid #183973;
     color: #d4af37;
+    font-family: "Consolas", "Cascadia Code", sans-serif;
     
-    /*  */
     text-align: center;
     font-size: 100px;
-    font-family: "Consolas", "Cascadia Code", sans-serif;
 }
